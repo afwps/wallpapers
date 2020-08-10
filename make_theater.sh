@@ -21,5 +21,5 @@ do
     # creates thumbnails
     convert -resize 200x "$p" "${p/papes/thumbnails}"
     # makes entries in README
-    echo "[![${p/papes\//}](https://raw.githubusercontent.com/$username/$repo/master/thumbnails${p/papes/})](https://raw.githubusercontent.com/$username/$repo/master/$p)" >> README.md
+    echo "[![${p/papes\//}](https://raw.githubusercontent.com/$username/$repo/blob/master/thumbnails${p/papes/})](https://raw.githubusercontent.com/$username/$repo/blob/master/$p)" >> README.md
 done
