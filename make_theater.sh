@@ -19,7 +19,7 @@ do
     printf '%4d/%d: %s\n' "$i" "$n" "${p/papes\//}"
 
     # creates thumbnails
-    convert -resize 200x "$p" "${p/papes/thumbnails}"
+    convert -resize 160x "$p" "${p/papes/thumbnails}"
     # makes entries in README
     echo "[![${p/papes\//}](https://github.com/$username/$repo/blob/master/thumbnails${p/papes/})](https://github.com/$username/$repo/blob/master/$p)" >> README.md
 done
