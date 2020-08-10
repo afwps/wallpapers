@@ -1,15 +1,13 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 # set -e
 
-# deletes thumbnails folder if it already exists
 rm -rf thumbnails
-# creates a new one
 mkdir thumbnails
 
-user="afwps"
+username="afwps"
 repo="theatrum"
 
-cat HEADER.md > README.md
+cat readme_header.md > README.md
 echo "" >> README.md
 
 n=$(ls papes/ | wc -l)
@@ -23,5 +21,5 @@ do
     # creates thumbnails
     convert -resize 200x "$p" "${p/papes/thumbnails}"
     # makes entries in README
-    echo "[![${p/papes\//}](https://raw.githubusercontent.com/$username/$repo/blob/master/thumbnails${p/papes/})](https://raw.githubusercontent.com/$username/$repo/blob/master/$p)" >> README.md
+    echo "[![${p/papes\//}](https://raw.githubusercontent.com/$username/$repo/master/thumbnails${p/papes/})](https://raw.githubusercontent.com/$username/$repo/master/$p)" >> README.md
 done
