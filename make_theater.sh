@@ -7,7 +7,7 @@ mkdir thumbnails
 username="afwps"
 repo="theatrum"
 
-cat readme_header.md > README.md
+cat HEADER.md > README.md
 echo "" >> README.md
 
 n=$(ls papes/ | wc -l)
@@ -21,5 +21,5 @@ do
     # creates thumbnails
     convert -resize 200x "$p" "${p/papes/thumbnails}"
     # makes entries in README
-    echo "[![${p/papes\//}](https://raw.githubusercontent.com/$username/theatrum/blob/master/thumbnails${p/papes/})](https://raw.githubusercontent.com/$username/theatrum/blob/master/$p)" >> README.md
+    echo "[![${p/papes\//}](https://raw.githubusercontent.com/$username/theatrum/master/thumbnails${p/papes/})](https://raw.githubusercontent.com/$username/theatrum/master/$p)" >> README.md
 done
