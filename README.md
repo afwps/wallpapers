@@ -1,5 +1,5 @@
 # theatrum
-theatrum is a rotating wallpaper theater that I use on a daily basis.
+Wallpapers
 
 ## Origin
 Most of these wallpapers are from [/wg/](http://4chan.org/wg).
