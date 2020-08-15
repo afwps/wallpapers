@@ -1,4 +1,4 @@
-# theatrum
+# wallpapers
 Wallpapers
 
 ## Origin
